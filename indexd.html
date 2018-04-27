@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <span>黎明黎明</span>
+    <a href="">李昆李昆</a>
+    <i>冯略冯略</i>
+    <script src="jquery.min.js"></script>
+    <script>
+        var pro = $("a").next().text();
+        var next = $("a").prev().text();
+
+        var newPro2 = "<span style='color:red'>"+pro.substring(pro.length-1)+"&nbsp;</span>"
+        var newPro1 = "<span>"+pro.substring(0,pro.length-1)+"</span>"
+
+        var newnext1 = "<span style='color:red'>&nbsp;"+next.substring(0,1)+"</span>"
+        var newnext2 = "<span>"+next.substring(1,next.length)+"</span>"
+        $("a").prev().html(newPro1+newPro2)
+        $("a").next().html(newnext1+newnext2)
+    </script>
+</body>
+
+</html>
